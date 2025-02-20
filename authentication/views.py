@@ -141,13 +141,6 @@ def user_details(request):
 
     return Response({"email": user.email, "username": user.username}, status=status.HTTP_200_OK)
 
-# @api_view(['GET'])
-# @permission_classes([IsAuthenticated])
-# def user_details(request):
-#     user = request.user
-#     return Response({'email': user.email, 'username': user.username})
-
-
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def logout_user(request):
